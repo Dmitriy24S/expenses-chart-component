@@ -93,6 +93,7 @@ function generateChart() {
               //   return 'hsl(33, 100%, 98%)'
             },
             callbacks: {
+              label: labelTooltipFormat,
               labelTextColor: function (context) {
                 // give cream color to bar hover tooltip text
                 return 'hsl(33, 100%, 98%)'
@@ -104,6 +105,22 @@ function generateChart() {
             }
           }
         }
+      }
+
+      // add $ sign to tooltip value:
+      function labelTooltipFormat(e) {
+        // console.log('e', e)
+        // chart: wn {config: dn, $context: {…}, platform: vs, id: 0, ctx: CanvasRenderingContext2D, …}
+        // dataIndex: 6
+        // dataset:  {data: Array(7), backgroundColor: 'hsl(10, 79%, 65%)', hoverBackgroundColor: Array(7), borderRadius: 3}
+        // datasetIndex: 0
+        // element:  BarElement {active: false, options: {…}, horizontal: false, base: 145.6, width: 35.84571428571426, …}
+        // formattedValue: "25.48"
+        // label: "sun"
+        // parsed: {x: 6, y: 25.48}
+        // raw: 25.48
+        // return `$${e[0].formattedValue}`
+        return `$${e.formattedValue}`
       }
 
       let barChart = new Chart(ctx, {
