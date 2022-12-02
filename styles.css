@@ -1,0 +1,133 @@
+:root {
+  --brown-dark: hsl(25, 47%, 15%);
+  --brown-medium: hsl(28, 10%, 53%);
+  --brown-light: hsl(28, 10%, 88%);
+  --cream: hsl(27, 66%, 92%);
+  --orange-light: hsl(33, 100%, 98%);
+  --red: hsl(10, 79%, 65%);
+  --red-light: hsl(10, 79%, 72%);
+  --cyan: hsl(186, 34%, 60%);
+  --normal: 400;
+  --bold: 700;
+  --radius: 18px;
+}
+
+*,
+:after,
+:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background-color: var(--cream);
+  padding: 10px;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+}
+button:focus {
+  outline: none;
+}
+button:focus-visible {
+  outline-offset: 3px;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+/* Wrapper */
+.wrapper {
+  margin: 0 auto;
+  margin-top: 4rem;
+  max-width: 400px;
+}
+
+/* Balance */
+.balance-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--red);
+  padding: 1rem 1.6rem;
+  border-radius: var(--radius);
+}
+/* Balance - Left */
+.balance {
+  display: flex;
+  flex-direction: column;
+  color: var(--orange-light);
+  justify-content: space-between;
+}
+.balance__value {
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin-top: 0.5rem;
+}
+/* Balance - Right */
+.logo img {
+  width: 50px;
+}
+
+/* Expense History */
+.expense {
+  margin-top: 1rem;
+  padding: 1.6rem;
+  background-color: var(--orange-light);
+  border-radius: var(--radius);
+}
+.expense__title {
+  color: var(--brown-dark);
+}
+
+/* Expense - Chart */
+#myChart {
+  margin: 1rem 0;
+}
+
+/* Divider */
+.divider {
+  width: 100%;
+  height: 2px;
+  background-color: var(--cream);
+  margin-top: 1.5rem;
+}
+
+/* Expense - Bottom */
+.expense__botom-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 1.5rem;
+}
+/* Expense - Total */
+.total__title {
+  color: var(--brown-medium);
+}
+.total__value {
+  color: var(--brown-dark);
+  font-size: 2.4rem;
+  font-weight: var(--bold);
+}
+/* Expense - Change */
+.expense__change {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.change__value {
+  color: var(--brown-dark);
+  font-weight: var(--bold);
+}
+.change__subtitle {
+  text-align: right;
+  color: var(--brown-medium);
+}

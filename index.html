@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    <!-- JS -->
+    <script src="./script.js" defer></script>
+
+    <title>Expenses chart component</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <section class="balance-wrapper">
+        <div class="balance">
+          <div class="balance__title">My balance</div>
+          <div class="balance__value">$921.48</div>
+        </div>
+        <div class="logo">
+          <img src="./images/logo.svg" alt="" />
+        </div>
+      </section>
+
+      <section class="expense">
+        <h2 class="expense__title">Spending - Last 7 days</h2>
+
+        <canvas id="myChart"></canvas>
+
+        <div class="divider"></div>
+
+        <div class="expense__botom-wrapper">
+          <div class="expense__total">
+            <div class="total__title">Total this month</div>
+            <div class="total__value">$478.33</div>
+          </div>
+          <div class="expense__change">
+            <div class="change__value">+2.4%</div>
+            <div class="change__subtitle">from last month</div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
